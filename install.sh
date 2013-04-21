@@ -1,4 +1,6 @@
 
+#!/bin/bash
+echo "Starting Install..."
 sudo apt-get update
 sudo addgroup --system www-data
 sudo adduser www-data www-data
@@ -38,9 +40,30 @@ rm advancemenu_2.6-1_armhf.deb
 rm pcsx_rearmed_19042013.zip 
 rm -r pcsx_rearmed
 
-sudo echo 'www-data ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
-echo '/home/pi/pimame_files/getip.sh' >> /home/pi/.profile
+
+
+
+if sudo grep --quiet www-data /etc/sudoers; then
+  echo "www-data already in sudoers, ignoring."
+else
+  sudo echo 'www-data ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
+fi
+##############
+if grep --quiet /home/pi/pimame_files/getip.sh /home/pi/.profile; then
+  echo "getip already exists, ignoring."
+else
+	echo '/home/pi/pimame_files/getip.sh' >> /home/pi/.profile
+fi
+##############
+if grep --quiet /home/pi/pimame_files/menu.py /home/pi/.profile; then
+  echo "menu already exists, ignoring."
+else
 echo 'python /home/pi/pimame_files/menu.py' >> /home/pi/.profile
+fi
+
+#sudo echo 'www-data ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
+#echo '/home/pi/pimame_files/getip.sh' >> /home/pi/.profile
+#echo 'python /home/pi/pimame_files/menu.py' >> /home/pi/.profile
 
 
 
