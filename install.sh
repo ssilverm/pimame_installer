@@ -9,13 +9,17 @@ sudo cp config_files/vsftpd.conf /etc/vsftpd.conf
 sudo cp config_files/php.ini /etc/php5/cgi/php.ini
 sudo cp config_files/lighttpd.conf /etc/lighttpd/lighttpd.conf
 sudo cp config_files/10-cgi.conf /etc/lighttpd/conf-enabled/10-cgi.conf
-sudo cp -r .advance/ .advance/
-sudo cp -r www/ /var/
+sudo cp config_files/inittab /etc/
+
+git clone https://github.com/ssilverm/PiMAME.git
+cp -r PiMAME/pimame_files ~/pimame_files
+sudo cp -r ~/pimame_files/.advance/ .advance/
+sudo cp -r PiMAME/www/ /var/
 
 
 sudo /etc/init.d/lighttpd force-reload
 
-git clone https://github.com/ssilverm/PiMAME.git
+
 wget http://sheasilverman.com/rpi/raspbian/debs/advancemame_1.2-1_armhf.deb
 wget http://sheasilverman.com/rpi/raspbian/debs/advancemenu_2.6-1_armhf.deb
 
@@ -23,7 +27,8 @@ sudo dpkg --force-overwrite -i advancemenu_2.6-1_armhf.deb
 sudo dpkg --force-overwrite -i advancemame_1.2-1_armhf.deb 
 wget http://sheasilverman.com/rpi/raspbian/pcsx_rearmed_19042013.zip
 unzip pcsx_rearmed_19042013.zip 
-
+mkdir ~/emulators
+mv -r pcsx_rearmed/ ~/emulators/
 
 
 rm advancemame_1.2-1_armhf.deb 
@@ -31,5 +36,10 @@ rm advancemenu_2.6-1_armhf.deb
 rm pcsx_rearmed_19042013.zip 
 
 sudo echo 'www-data ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
+sudo echo '/home/pi/pimame_files/getip.sh' >> /home/pi/.profile
+sudo echo 'python /home/pi/pimame_files/menu.py' >> /home/pi/.profile
+
+
+
 sudo reboot
 
