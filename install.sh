@@ -29,8 +29,9 @@ wget http://sheasilverman.com/rpi/raspbian/pcsx_rearmed_19042013.zip
 unzip pcsx_rearmed_19042013.zip 
 mkdir /home/pi/emulators
 cp -r pcsx_rearmed/ /home/pi/emulators/
-sudo chown -R pi /home/pi/emulators
-sudo chown -R pi /home/pi/pimame_files
+sudo chown -R pi:pi /home/pi/emulators
+sudo chown -R pi:pi /home/pi/pimame_files
+chmod +x /home/pi/pimame_files/getip.sh
 
 rm advancemame_1.2-1_armhf.deb 
 rm advancemenu_2.6-1_armhf.deb 
