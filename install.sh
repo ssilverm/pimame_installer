@@ -50,7 +50,7 @@ wget http://sheasilverman.com/rpi/raspbian/gngeo_install.zip
 unzip gngeo_install.zip
 cp gngeo/gngeo /usr/local/bin/gngeo
 mkdir /usr/local/share/gngeo
-cp gngeoFolder/gngeo_data.zip /usr/local/share/gngeo/gngeo_data.zip
+cp gngeo/gngeoFolder/gngeo_data.zip /usr/local/share/gngeo/gngeo_data.zip
 cp gngeo/gngeo.1 /usr/local/share/man/man1/gngeo.1
 
 
@@ -75,7 +75,7 @@ fi
 
 mkdir /home/pi/roms
 sudo chown -R pi:pi /home/pi/roms
-rm  -r /home/pi/python_installer/PiMAME
+rm  -r /home/pi/pimame_installer/PiMAME
 #sudo echo 'www-data ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
 #echo '/home/pi/pimame_files/getip.sh' >> /home/pi/.profile
 #echo 'python /home/pi/pimame_files/menu.py' >> /home/pi/.profile
