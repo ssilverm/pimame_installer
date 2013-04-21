@@ -14,7 +14,7 @@ sudo cp config_files/inittab /etc/
 git clone https://github.com/ssilverm/PiMAME.git
 cp -r PiMAME/pimame_files /home/pi/
 cp -r PiMAME/.advance/ /home/pi/
-cp -r PiMAME/www/ /var/
+sudo cp -r PiMAME/www/ /var/
 
 
 sudo /etc/init.d/lighttpd force-reload
@@ -29,7 +29,8 @@ wget http://sheasilverman.com/rpi/raspbian/pcsx_rearmed_19042013.zip
 unzip pcsx_rearmed_19042013.zip 
 mkdir /home/pi/emulators
 cp -r pcsx_rearmed/ /home/pi/emulators/
-
+sudo chown -R pi /home/pi/emulators
+sudo chown -R pi /home/pi/pimame_files
 
 rm advancemame_1.2-1_armhf.deb 
 rm advancemenu_2.6-1_armhf.deb 
