@@ -13,8 +13,8 @@ sudo cp config_files/inittab /etc/
 
 git clone https://github.com/ssilverm/PiMAME.git
 cp -r PiMAME/pimame_files /home/pi/
-sudo cp -r PiMAME/pimame_files/.advance/ /home/pi/
-sudo cp -r PiMAME/www/ /var/
+cp -r PiMAME/.advance/ /home/pi/
+cp -r PiMAME/www/ /var/
 
 
 sudo /etc/init.d/lighttpd force-reload
@@ -37,8 +37,8 @@ rm pcsx_rearmed_19042013.zip
 rm -r pcsx_rearmed
 
 sudo echo 'www-data ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
-sudo echo '/home/pi/pimame_files/getip.sh' >> /home/pi/.profile
-sudo echo 'python /home/pi/pimame_files/menu.py' >> /home/pi/.profile
+echo '/home/pi/pimame_files/getip.sh' >> /home/pi/.profile
+echo 'python /home/pi/pimame_files/menu.py' >> /home/pi/.profile
 
 
 
