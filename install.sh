@@ -29,15 +29,16 @@ sudo /etc/init.d/lighttpd force-reload
 
 wget http://sheasilverman.com/rpi/raspbian/debs/advancemame_1.2-1_armhf.deb
 wget http://sheasilverman.com/rpi/raspbian/debs/advancemenu_2.6-1_armhf.deb
-
 sudo dpkg --force-overwrite -i advancemenu_2.6-1_armhf.deb 
 sudo dpkg --force-overwrite -i advancemame_1.2-1_armhf.deb 
+
 wget http://sheasilverman.com/rpi/raspbian/pcsx_rearmed_19042013.zip
 unzip pcsx_rearmed_19042013.zip 
 mkdir /home/pi/emulators
 cp -r pcsx_rearmed/ /home/pi/emulators/
 sudo chown -R pi:pi /home/pi/emulators
 sudo chown -R pi:pi /home/pi/pimame_files
+
 chmod +x /home/pi/pimame_files/getip.sh
 
 rm advancemame_1.2-1_armhf.deb 
@@ -45,6 +46,12 @@ rm advancemenu_2.6-1_armhf.deb
 rm pcsx_rearmed_19042013.zip 
 rm -r pcsx_rearmed
 
+wget http://sheasilverman.com/rpi/raspbian/gngeo_install.zip
+unzip gngeo_install.zip
+cp gngeo/gngeo /usr/local/bin/gngeo
+mkdir /usr/local/share/gngeo
+cp gngeoFolder/gngeo_data.zip /usr/local/share/gngeo/gngeo_data.zip
+cp gngeo/gngeo.1 /usr/local/share/man/man1/gngeo.1
 
 
 
@@ -66,6 +73,9 @@ else
 echo 'python /home/pi/pimame_files/menu.py' >> /home/pi/.profile
 fi
 
+mkdir /home/pi/roms
+sudo chown -R pi:pi /home/pi/roms
+rm  -r /home/pi/python_installer/PiMAME
 #sudo echo 'www-data ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
 #echo '/home/pi/pimame_files/getip.sh' >> /home/pi/.profile
 #echo 'python /home/pi/pimame_files/menu.py' >> /home/pi/.profile
