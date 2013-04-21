@@ -1,5 +1,10 @@
 
 #!/bin/bash
+if [ "$(id -u)" != "0" ]; then
+   echo "This script must be run like: sudo ./install.sh" 1>&2
+   exit 1
+fi
+
 echo "Starting Install..."
 sudo apt-get update
 sudo addgroup --system www-data
