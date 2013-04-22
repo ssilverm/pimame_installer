@@ -21,6 +21,7 @@ sudo cp config_files/inittab /etc/
 git clone https://github.com/ssilverm/PiMAME.git
 cp -r PiMAME/pimame_files /home/pi/
 cp -r PiMAME/.advance/ /home/pi/
+cp -r PiMAME/.gngeo /home/pi/
 sudo cp -r PiMAME/www/ /var/
 
 
