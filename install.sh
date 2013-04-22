@@ -49,11 +49,18 @@ rm -r pcsx_rearmed
 wget http://sheasilverman.com/rpi/raspbian/gngeo_install.zip
 unzip gngeo_install.zip
 cp gngeo/gngeo /usr/local/bin/gngeo
+
 mkdir /usr/local/share/gngeo
 cp gngeo/gngeoFolder/gngeo_data.zip /usr/local/share/gngeo/gngeo_data.zip
 cp gngeo/gngeo.1 /usr/local/share/man/man1/gngeo.1
 
+sudo chown pi:pi /usr/local/bin/gngeo
+sudo chown -R pi:pi /usr/local/share/gngeo
+sudo chown pi:pi /usr/local/share/man/man1/gngeo.1
 
+rm gngeo_install.zip
+rm -r gngeo/
+rm -r __MACOSX
 
 if sudo grep --quiet www-data /etc/sudoers; then
   echo "www-data already in sudoers, ignoring."
