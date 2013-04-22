@@ -29,8 +29,10 @@ sudo /etc/init.d/lighttpd force-reload
 
 wget http://sheasilverman.com/rpi/raspbian/debs/advancemame_1.2-1_armhf.deb
 wget http://sheasilverman.com/rpi/raspbian/debs/advancemenu_2.6-1_armhf.deb
+wget http://sheasilverman.com/rpi/raspbian/gngeo_0.8-1_armhf.deb
 sudo dpkg --force-overwrite -i advancemenu_2.6-1_armhf.deb 
 sudo dpkg --force-overwrite -i advancemame_1.2-1_armhf.deb 
+sudo dpkg --force-overwrite -i gngeo_0.8-1_armhf.deb
 
 wget http://sheasilverman.com/rpi/raspbian/pcsx_rearmed_19042013.zip
 unzip pcsx_rearmed_19042013.zip 
@@ -46,21 +48,8 @@ rm advancemenu_2.6-1_armhf.deb
 rm pcsx_rearmed_19042013.zip 
 rm -r pcsx_rearmed
 
-wget http://sheasilverman.com/rpi/raspbian/gngeo_install.zip
-unzip gngeo_install.zip
-cp gngeo/gngeo /usr/local/bin/gngeo
 
-mkdir /usr/local/share/gngeo
-cp gngeo/gngeoFolder/gngeo_data.zip /usr/local/share/gngeo/gngeo_data.zip
-cp gngeo/gngeo.1 /usr/local/share/man/man1/gngeo.1
 
-sudo chown pi:pi /usr/local/bin/gngeo
-sudo chown -R pi:pi /usr/local/share/gngeo
-sudo chown pi:pi /usr/local/share/man/man1/gngeo.1
-
-rm gngeo_install.zip
-rm -r gngeo/
-rm -r __MACOSX
 
 if sudo grep --quiet www-data /etc/sudoers; then
   echo "www-data already in sudoers, ignoring."
