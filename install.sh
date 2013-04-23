@@ -1,4 +1,3 @@
-
 #!/bin/bash
 if [ "$(id -u)" != "0" ]; then
    echo "This script must be run like: sudo ./install.sh" 1>&2
@@ -35,8 +34,8 @@ sudo dpkg --force-overwrite -i advancemenu_2.6-1_armhf.deb
 sudo dpkg --force-overwrite -i advancemame_1.2-1_armhf.deb 
 sudo dpkg --force-overwrite -i gngeo_0.8-1_armhf.deb
 
-wget http://sheasilverman.com/rpi/raspbian/pcsx_rearmed_19042013.zip
-unzip pcsx_rearmed_19042013.zip 
+wget http://sheasilverman.com/rpi/raspbian/pcsx_rearmed_22042013.tgz
+tar zxfv pcsx_rearmed_22042013.tgz
 mkdir /home/pi/emulators
 cp -r pcsx_rearmed/ /home/pi/emulators/
 sudo chown -R pi:pi /home/pi/emulators
