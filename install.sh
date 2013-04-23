@@ -45,7 +45,7 @@ chmod +x /home/pi/pimame_files/getip.sh
 
 rm advancemame_1.2-1_armhf.deb 
 rm advancemenu_2.6-1_armhf.deb 
-rm pcsx_rearmed_19042013.zip 
+rm pcsx_rearmed_22042013.tgz
 rm -r pcsx_rearmed
 rm gngeo_0.8-1_armhf.deb
 
