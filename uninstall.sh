@@ -6,7 +6,7 @@ fi
 
 echo "Starting Removal of PiMAME :( ...."
 
-sudo apt-get remove vsftpd imagemagick lighttpd php5-cgi
+sudo apt-get -q -y remove vsftpd imagemagick lighttpd php5-cgi
 
 rm -r /home/pi/pimame_files 
 sudo rm -r /var/www

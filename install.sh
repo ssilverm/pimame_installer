@@ -8,7 +8,7 @@ echo "Starting Install..."
 sudo apt-get update
 sudo addgroup --system www-data
 sudo adduser www-data www-data
-sudo apt-get install build-essential automake libmpg123-dev libmodplug-dev libphysfs-dev libfreetype6-dev libdevil-dev liblua5.1-0-dev libopenal-dev libsdl1.2-dev libvorbis-dev vsftpd imagemagick lighttpd php5-cgi git
+sudo apt-get -q -y install build-essential automake libmpg123-dev libmodplug-dev libphysfs-dev libfreetype6-dev libdevil-dev liblua5.1-0-dev libopenal-dev libsdl1.2-dev libvorbis-dev vsftpd imagemagick lighttpd php5-cgi git
 sudo lighty-enable-mod cgi
 
 sudo cp config_files/vsftpd.conf /etc/vsftpd.conf
