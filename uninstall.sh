@@ -27,19 +27,19 @@ rm -r /home/pi/emulators
 if sudo grep --quiet www-data /etc/sudoers; then
     sudo sed -i '/www-data/d' /etc/sudoers
 else
-  echo "www-data already in sudoers, ignoring."
+  echo "www-data does not exist, ignoring."
 fi
 ##############
 if grep --quiet /home/pi/pimame_files/getip.sh /home/pi/.profile; then
   sed -i '/getip.sh/d' /home/pi/.profile
 else
-  echo "getip already exists, ignoring."
+  echo "getip does not exist, ignoring."
 fi
 ##############
 if grep --quiet /home/pi/pimame_files/menu.py /home/pi/.profile; then
   sed -i '/menu.py/d' /home/pi/.profile
 else
-  echo "menu already exists, ignoring."
+  echo "menu does not exist, ignoring."
 fi
 
 rm  -r /home/pi/pimame_installer/PiMAME
