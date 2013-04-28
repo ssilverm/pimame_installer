@@ -11,8 +11,8 @@ sudo apt-get update
 git pull
 git clone https://github.com/ssilverm/PiMAME.git
 cd PiMAME
-PREVGITFILE_mame= git show HEAD~1:.advance/advmame.rc |  md5
-CURRENTFILE_mame= /home/pi/.advance/advmame.rc |  md5
+PREVGITFILE_mame= git show HEAD~1:.advance/advmame.rc |  md5sum
+CURRENTFILE_mame= /home/pi/.advance/advmame.rc |  md5sum
 if $PREVGITFILE_mame == CURRENTFILE_mame; then
 	#DO COPY STUFF HERE
 	echo "Default AdvMAME configuration, updating."
@@ -22,8 +22,8 @@ else
 	cp .advance/advmame.rc.default /home/pi/.advance/advmame.rc.default
 fi
 
-PREVGITFILE_menu= git show HEAD~1:.advance/advmenu.rc |  md5
-CURRENTFILE_menu= /home/pi/.advance/advmenu.rc |  md5
+PREVGITFILE_menu= git show HEAD~1:.advance/advmenu.rc |  md5sum
+CURRENTFILE_menu= /home/pi/.advance/advmenu.rc |  md5sum
 if $PREVGITFILE_me == CURRENTFILE_me; then
 	#DO COPY STUFF HERE
 	echo "Default AdvMENU configuration, updating."
@@ -33,8 +33,8 @@ else
 	cp .advance/advmenu.rc.default /home/pi/.advance/advmenu.rc.default
 fi
 
-PREVGITFILE_neo= git show HEAD~1:.gngeo/gngeorc |  md5
-CURRENTFILE_neo= /home/pi/.gngeo/gngeorc |  md5
+PREVGITFILE_neo= git show HEAD~1:.gngeo/gngeorc |  md5sum
+CURRENTFILE_neo= /home/pi/.gngeo/gngeorc |  md5sum
 if $PREVGITFILE_mame == CURRENTFILE_mame; then
 	#DO COPY STUFF HERE
 	echo "Default GNGeo configuration, updating."
@@ -44,7 +44,7 @@ else
 	cp .gngeo/gngeorc.default /home/pi/.gngeo/gngeorc.default
 fi
 
-
+cd ..
 sudo cp config_files/vsftpd.conf /etc/vsftpd.conf
 sudo cp config_files/php.ini /etc/php5/cgi/php.ini
 sudo cp config_files/lighttpd.conf /etc/lighttpd/lighttpd.conf
