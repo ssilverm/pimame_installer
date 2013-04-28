@@ -12,8 +12,8 @@ git pull
 git clone https://github.com/ssilverm/PiMAME.git
 cd PiMAME
 git pull
-PREVGITFILE_mame= git show HEAD~1:.advance/advmame.rc |  md5sum | awk '{ print $1 }'
-CURRENTFILE_mame= /home/pi/.advance/advmame.rc |  md5sum | awk '{ print $1 }'
+PREVGITFILE_mame=$(git show HEAD~1:.advance/advmame.rc |  md5sum | awk '{ print $1 }')
+CURRENTFILE_mame=$(/home/pi/.advance/advmame.rc |  md5sum | awk '{ print $1 }')
 if [ "$PREVGITFILE_mame" = "$CURRENTFILE_mame" ]; then
 	#DO COPY STUFF HERE
 	echo "Default AdvMAME configuration, updating."
@@ -23,8 +23,8 @@ else
 	sudo cp .advance/advmame.rc.default /home/pi/.advance/advmame.rc.default
 fi
 
-PREVGITFILE_menu= git show HEAD~1:.advance/advmenu.rc |  md5sum | awk '{ print $1 }'
-CURRENTFILE_menu= /home/pi/.advance/advmenu.rc |  md5sum | awk '{ print $1 }'
+PREVGITFILE_menu=$(git show HEAD~1:.advance/advmenu.rc |  md5sum | awk '{ print $1 }')
+CURRENTFILE_menu=$(/home/pi/.advance/advmenu.rc |  md5sum | awk '{ print $1 }')
 if [ "$PREVGITFILE_menu" = "$CURRENTFILE_menu" ]; then
 	#DO COPY STUFF HERE
 	echo "Default AdvMENU configuration, updating."
@@ -34,8 +34,8 @@ else
 	sudo cp .advance/advmenu.rc.default /home/pi/.advance/advmenu.rc.default
 fi
 
-PREVGITFILE_neo= git show HEAD~1:.gngeo/gngeorc |  md5sum | awk '{ print $1 }'
-CURRENTFILE_neo= /home/pi/.gngeo/gngeorc |  md5sum | awk '{ print $1 }'
+PREVGITFILE_neo=$(git show HEAD~1:.gngeo/gngeorc |  md5sum | awk '{ print $1 }')
+CURRENTFILE_neo=$(/home/pi/.gngeo/gngeorc |  md5sum | awk '{ print $1 }')
 if [ "$PREVGITFILE_neo" = "$CURRENTFILE_neo" ]; then
 	#DO COPY STUFF HERE
 	echo "Default GNGeo configuration, updating."
