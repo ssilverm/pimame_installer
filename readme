@@ -1,3 +1,14 @@
 PiMAME Installer
 
-This is a WIP.  1st day of activity.
+http://pimame.org
+
+For the Raspberry Pi
+
+sudo apt-get install git
+git clone https://github.com/ssilverm/pimame_installer
+cd pimame_installer
+./pimame.py
+
+Install will fully install PiMAME, including Web Frontend, FTP server, etc
+Update will update PiMAME (will not overwrite custom config files)
+Remove will totally remove PiMAME :(
