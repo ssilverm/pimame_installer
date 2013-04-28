@@ -11,15 +11,16 @@ sudo apt-get update
 git pull
 git clone https://github.com/ssilverm/PiMAME.git
 cd PiMAME
+git pull
 PREVGITFILE_mame= git show HEAD~1:.advance/advmame.rc |  md5sum
 CURRENTFILE_mame= /home/pi/.advance/advmame.rc |  md5sum
 if $PREVGITFILE_mame == CURRENTFILE_mame; then
 	#DO COPY STUFF HERE
 	echo "Default AdvMAME configuration, updating."
-	cp .advance/advmame.rc.default /home/pi/.advance/advmame.rc
+	sudo cp .advance/advmame.rc.default /home/pi/.advance/advmame.rc
 else
 	echo "AdvMAME config file has been changed.  Not overwriting.  Current Version in advmame.rc.default"
-	cp .advance/advmame.rc.default /home/pi/.advance/advmame.rc.default
+	sudo cp .advance/advmame.rc.default /home/pi/.advance/advmame.rc.default
 fi
 
 PREVGITFILE_menu= git show HEAD~1:.advance/advmenu.rc |  md5sum
@@ -27,10 +28,10 @@ CURRENTFILE_menu= /home/pi/.advance/advmenu.rc |  md5sum
 if $PREVGITFILE_me == CURRENTFILE_me; then
 	#DO COPY STUFF HERE
 	echo "Default AdvMENU configuration, updating."
-	cp .advance/advmenu.rc.default /home/pi/.advance/advmenu.rc
+	sudo cp .advance/advmenu.rc.default /home/pi/.advance/advmenu.rc
 else
 	echo "AdvMENU config file has been changed.  Not overwriting.  Current Version in advmenu.rc.default"
-	cp .advance/advmenu.rc.default /home/pi/.advance/advmenu.rc.default
+	sudo cp .advance/advmenu.rc.default /home/pi/.advance/advmenu.rc.default
 fi
 
 PREVGITFILE_neo= git show HEAD~1:.gngeo/gngeorc |  md5sum
@@ -38,10 +39,10 @@ CURRENTFILE_neo= /home/pi/.gngeo/gngeorc |  md5sum
 if $PREVGITFILE_mame == CURRENTFILE_mame; then
 	#DO COPY STUFF HERE
 	echo "Default GNGeo configuration, updating."
-	cp .gngeo/gngeorc.default /home/pi/.gngeo/gngeorc
+	sudo cp .gngeo/gngeorc.default /home/pi/.gngeo/gngeorc
 else
 	echo "GNGeo config file has been changed.  Not overwriting.  Current Version in gngeorc.default"
-	cp .gngeo/gngeorc.default /home/pi/.gngeo/gngeorc.default
+	sudo cp .gngeo/gngeorc.default /home/pi/.gngeo/gngeorc.default
 fi
 
 cd ..
