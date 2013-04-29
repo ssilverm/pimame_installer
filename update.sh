@@ -56,7 +56,8 @@ sudo cp -r PiMAME/www/ /var/
 
 sudo /etc/init.d/lighttpd force-reload
 
-
+#### Updated Files Go Here
+source update_include.sh
 
 
 
