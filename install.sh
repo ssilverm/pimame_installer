@@ -49,7 +49,8 @@ rm pcsx_rearmed_22042013.tgz
 rm -r pcsx_rearmed
 rm gngeo_0.8-1_armhf.deb
 
-
+wget http://socialcase.com/raspberrypi/gridlee.zip
+mv gridlee.zip /home/pi/.advance/gridlee.zip
 
 if sudo grep --quiet www-data /etc/sudoers; then
   echo "www-data already in sudoers, ignoring."
