@@ -7,7 +7,9 @@ For the Raspberry Pi
 sudo apt-get install git
 git clone https://github.com/ssilverm/pimame_installer
 cd pimame_installer
-./pimame.py
+sudo ./install.sh
+
+(other options: sudo ./update.sh and sudo ./uninstall.sh)
 
 Install will fully install PiMAME, including Web Frontend, FTP server, etc
 Update will update PiMAME (will not overwrite custom config files)
