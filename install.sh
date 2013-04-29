@@ -27,11 +27,12 @@ sudo cp -r PiMAME/www/ /var/
 sudo /etc/init.d/lighttpd force-reload
 
 
-wget http://sheasilverman.com/rpi/raspbian/debs/advancemame_1.2-1_armhf.deb
+#wget http://sheasilverman.com/rpi/raspbian/debs/advancemame_1.2-1_armhf.deb
+wget http://sheasilverman.com/rpi/raspbian/debs/advancemame-raspberrypi_1-1_armhf.deb
 wget http://sheasilverman.com/rpi/raspbian/debs/advancemenu_2.6-1_armhf.deb
 wget http://sheasilverman.com/rpi/raspbian/gngeo_0.8-1_armhf.deb
 sudo dpkg --force-overwrite -i advancemenu_2.6-1_armhf.deb 
-sudo dpkg --force-overwrite -i advancemame_1.2-1_armhf.deb 
+sudo dpkg --force-overwrite -i advancemame-raspberrypi_1-1_armhf.deb
 sudo dpkg --force-overwrite -i gngeo_0.8-1_armhf.deb
 
 wget http://sheasilverman.com/rpi/raspbian/pcsx_rearmed_22042013.tgz
@@ -43,7 +44,8 @@ sudo chown -R pi:pi /home/pi/pimame_files
 
 chmod +x /home/pi/pimame_files/getip.sh
 
-rm advancemame_1.2-1_armhf.deb 
+#rm advancemame_1.2-1_armhf.deb
+rm advancemame-raspberrypi_1-1_armhf.deb 
 rm advancemenu_2.6-1_armhf.deb 
 rm pcsx_rearmed_22042013.tgz
 rm -r pcsx_rearmed

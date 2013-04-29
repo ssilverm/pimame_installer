@@ -11,9 +11,9 @@ sudo apt-get -q -y remove vsftpd imagemagick lighttpd php5-cgi
 rm -r /home/pi/pimame_files 
 sudo rm -r /var/www
 
-sudo dpkg --force-overwrite -i advancemenu_2.6-1_armhf.deb 
-sudo dpkg --force-overwrite -i advancemame_1.2-1_armhf.deb 
-sudo dpkg --force-overwrite -i gngeo_0.8-1_armhf.deb
+#sudo dpkg --force-overwrite -i advancemenu_2.6-1_armhf.deb 
+#sudo dpkg --force-overwrite -i advancemame-raspberrypi_1-1_armhf.deb
+#sudo dpkg --force-overwrite -i gngeo_0.8-1_armhf.deb
 
 sudo dpkg -r advancemame
 sudo dpkg -r advancemenu
