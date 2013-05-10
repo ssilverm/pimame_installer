@@ -1,8 +1,8 @@
 #!/bin/bash
-if [ "$(id -u)" != "0" ]; then
-   echo "This script must be run like: sudo ./install.sh" 1>&2
-   exit 1
-fi
+#if [ "$(id -u)" != "0" ]; then
+#   echo "This script must be run like: sudo ./install.sh" 1>&2
+#   exit 1
+#fi
 
 echo "Starting Install..."
 sudo apt-get update
@@ -39,8 +39,8 @@ wget http://sheasilverman.com/rpi/raspbian/pcsx_rearmed_22042013.tgz
 tar zxfv pcsx_rearmed_22042013.tgz
 mkdir /home/pi/emulators
 cp -r pcsx_rearmed/ /home/pi/emulators/
-sudo chown -R pi:pi /home/pi/emulators
-sudo chown -R pi:pi /home/pi/pimame_files
+#sudo chown -R pi:pi /home/pi/emulators
+#sudo chown -R pi:pi /home/pi/pimame_files
 
 chmod +x /home/pi/pimame_files/getip.sh
 
@@ -73,7 +73,7 @@ echo 'python /home/pi/pimame_files/menu.py' >> /home/pi/.profile
 fi
 
 mkdir /home/pi/roms
-sudo chown -R pi:pi /home/pi/roms
+#sudo chown -R pi:pi /home/pi/roms
 rm  -r /home/pi/pimame_installer/PiMAME
 #sudo echo 'www-data ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
 #echo '/home/pi/pimame_files/getip.sh' >> /home/pi/.profile
