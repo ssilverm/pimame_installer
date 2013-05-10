@@ -48,7 +48,7 @@ chmod +x /home/pi/pimame_files/getip.sh
 rm advancemame-raspberrypi_1-1_armhf.deb 
 rm advancemenu_2.6-1_armhf.deb 
 rm pcsx_rearmed_22042013.tgz
-rm -r pcsx_rearmed
+rm -rf pcsx_rearmed
 rm gngeo_0.8-1_armhf.deb
 
 wget http://socialcase.com/raspberrypi/gridlee.zip
@@ -74,7 +74,7 @@ fi
 
 mkdir /home/pi/roms
 #sudo chown -R pi:pi /home/pi/roms
-rm  -r /home/pi/pimame_installer/PiMAME
+rm  -rf /home/pi/pimame_installer/PiMAME
 #sudo echo 'www-data ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
 #echo '/home/pi/pimame_files/getip.sh' >> /home/pi/.profile
 #echo 'python /home/pi/pimame_files/menu.py' >> /home/pi/.profile
