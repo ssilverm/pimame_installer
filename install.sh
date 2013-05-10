@@ -79,5 +79,5 @@ rm  -r /home/pi/pimame_installer/PiMAME
 #echo '/home/pi/pimame_files/getip.sh' >> /home/pi/.profile
 #echo 'python /home/pi/pimame_files/menu.py' >> /home/pi/.profile
 
-
+echo "Please restart to activate PiMAME :)"
 
