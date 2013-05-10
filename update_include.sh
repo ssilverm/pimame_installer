@@ -1,7 +1,12 @@
 echo "Checking update_include script"
 echo "Updating..."
-wget http://socialcase.com/raspberrypi/gridlee.zip
-mv gridlee.zip /home/pi/roms/
+
+if [ ! -f /home/pi/roms/gridlee.zip ];
+then
+    echo "downloading gridlee"
+    wget http://socialcase.com/raspberrypi/gridlee.zip
+    mv gridlee.zip /home/pi/roms/
+fi
 
 
 #increment
