@@ -57,7 +57,7 @@ mv gridlee.zip /home/pi/roms/
 if sudo grep --quiet www-data /etc/sudoers; then
   echo "www-data already in sudoers, ignoring."
 else
-  sudo echo 'www-data ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
+  sudo sh -c "echo 'www-data ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers"
 fi
 ##############
 if grep --quiet /home/pi/pimame_files/getip.sh /home/pi/.profile; then
