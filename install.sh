@@ -51,6 +51,8 @@ rm pcsx_rearmed_22042013.tgz
 rm -rf pcsx_rearmed
 rm gngeo_0.8-1_armhf.deb
 
+mkdir /home/pi/roms
+
 wget http://socialcase.com/raspberrypi/gridlee.zip
 mv gridlee.zip /home/pi/roms/
 
@@ -72,7 +74,6 @@ else
 echo 'python /home/pi/pimame_files/menu.py' >> /home/pi/.profile
 fi
 
-mkdir /home/pi/roms
 #sudo chown -R pi:pi /home/pi/roms
 rm  -rf /home/pi/pimame_installer/PiMAME
 #sudo echo 'www-data ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
