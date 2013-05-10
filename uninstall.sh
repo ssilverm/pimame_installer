@@ -20,7 +20,7 @@ sudo dpkg -r advancemenu
 sudo dpkg -r gngeo
 
 
-rm -r /home/pi/emulators
+rm -rf /home/pi/emulators
 
 
 
@@ -42,7 +42,7 @@ else
   echo "menu does not exist, ignoring."
 fi
 
-rm  -r /home/pi/pimame_installer/PiMAME
+rm  -rf /home/pi/pimame_installer/PiMAME
 
 
 
