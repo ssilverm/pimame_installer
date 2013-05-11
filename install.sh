@@ -68,9 +68,9 @@ cd /home/pi/pimame_installer
 ###mame4all
 git clone https://code.google.com/p/mame4all-pi/
 mkdir /home/pi/emulators/mame4all-pi/
-cp mame4all-pi/mame4all-pi.zip /home/pi/emulators/mame4all-pi/
+cp mame4all-pi/mame4all_pi.zip /home/pi/emulators/mame4all-pi/
 cd /home/pi/emulators/mame4all-pi/
-unzip mame4all-pi.zip
+unzip mame4all_pi.zip
 ln -s /home/pi/emulators/mame4all-pi/roms/ /home/pi/roms/mame4all
 cd /home/pimame_installer
 
