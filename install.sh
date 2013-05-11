@@ -72,7 +72,7 @@ cp mame4all-pi/mame4all_pi.zip /home/pi/emulators/mame4all-pi/
 cd /home/pi/emulators/mame4all-pi/
 unzip mame4all_pi.zip
 ln -s /home/pi/emulators/mame4all-pi/roms/ /home/pi/roms/mame4all
-cd /home/pimame_installer
+cd /home/pi/pimame_installer
 
 wget http://socialcase.com/raspberrypi/gridlee.zip
 mv gridlee.zip /home/pi/roms/
