@@ -18,9 +18,12 @@ sudo cp config_files/10-cgi.conf /etc/lighttpd/conf-enabled/10-cgi.conf
 sudo cp config_files/inittab /etc/
 
 git clone https://github.com/ssilverm/PiMAME.git
+
+##remove this
 cd PiMAME/
 git checkout beta
 cd ..
+
 cp -r PiMAME/pimame_files /home/pi/
 cp -r PiMAME/.advance/ /home/pi/
 cp -r PiMAME/.gngeo /home/pi/
@@ -76,6 +79,7 @@ cd /home/pi/emulators/mame4all-pi/
 unzip mame4all_pi.zip
 ln -s /home/pi/emulators/mame4all-pi/roms/ /home/pi/roms/mame4all
 cd /home/pi/pimame_installer
+rm -rf mame4all-pi/
 
 wget http://socialcase.com/raspberrypi/gridlee.zip
 mv gridlee.zip /home/pi/roms/
