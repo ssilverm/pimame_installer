@@ -27,6 +27,7 @@ cd /home/pi/emulators/mame4all-pi/
 unzip mame4all_pi.zip
 ln -s /home/pi/emulators/mame4all-pi/roms/ /home/pi/roms/mame4all
 cd /home/pi/pimame_installer
+rm -rf mame4all-pi/
 
 
 cp PiMAME/pimame_files/menu.py /home/pi/pimame_files/menu.py
