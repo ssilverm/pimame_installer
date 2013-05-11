@@ -18,6 +18,9 @@ sudo cp config_files/10-cgi.conf /etc/lighttpd/conf-enabled/10-cgi.conf
 sudo cp config_files/inittab /etc/
 
 git clone https://github.com/ssilverm/PiMAME.git
+cd PiMAME/
+git checkout beta
+cd ..
 cp -r PiMAME/pimame_files /home/pi/
 cp -r PiMAME/.advance/ /home/pi/
 cp -r PiMAME/.gngeo /home/pi/
