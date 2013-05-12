@@ -36,4 +36,4 @@ cp PiMAME/pimame_files/menu.py /home/pi/pimame_files/menu.py
 
 
 #increment
-echo "PiMAME is now version 0.6 Beta 6.3"
+echo "PiMAME is now version 0.7 Beta 1"
