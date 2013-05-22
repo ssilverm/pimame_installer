@@ -34,6 +34,9 @@ rm -rf mame4all-pi/
 #cd ..
 cp PiMAME/pimame_files/menu.py /home/pi/pimame_files/menu.py
 
+#http://pimame.org/forum/discussion/48/mame-settings-not-saving-in-new-installer-script-version-#Item_5 - User Cramps
+sudo chown pi /home/pi/.advance
+sudo chmod 770 /home/pi/.advance
 
 #increment
-echo "PiMAME is now version 0.7 Beta 1"
+echo "PiMAME is now version 0.7 Beta 2"
