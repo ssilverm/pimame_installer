@@ -19,10 +19,11 @@ sudo cp config_files/inittab /etc/
 
 git clone https://github.com/ssilverm/PiMAME.git
 
+
 ##remove this
-#cd PiMAME/
-#git checkout beta
-#cd ..
+cd PiMAME/
+git checkout beta
+cd ..
 
 cp -r PiMAME/pimame_files /home/pi/
 cp -r PiMAME/.advance/ /home/pi/
