@@ -37,11 +37,9 @@ sudo /etc/init.d/lighttpd force-reload
 wget http://sheasilverman.com/rpi/raspbian/debs/advancemame-raspberrypi_1-1_armhf.deb
 wget http://sheasilverman.com/rpi/raspbian/debs/advancemenu_2.6-1_armhf.deb
 wget http://sheasilverman.com/rpi/raspbian/gngeo_0.8-1_armhf.deb
-wget http://sheasilverman.com/rpi/raspbian/debs/advancemame_1.2-1_armhf.deb
 sudo dpkg --force-overwrite -i advancemenu_2.6-1_armhf.deb 
 sudo dpkg --force-overwrite -i advancemame-raspberrypi_1-1_armhf.deb
 sudo dpkg --force-overwrite -i gngeo_0.8-1_armhf.deb
-sudo dpkg --force-overwrite -i advancemame_1.2-1_armhf.deb
 
 wget http://sheasilverman.com/rpi/raspbian/pcsx_rearmed_22042013.tgz
 tar zxfv pcsx_rearmed_22042013.tgz
@@ -58,7 +56,6 @@ rm advancemenu_2.6-1_armhf.deb
 rm pcsx_rearmed_22042013.tgz
 rm -rf pcsx_rearmed
 rm gngeo_0.8-1_armhf.deb
-rm advancemame_1.2-1_armhf.deb
 
 mkdir /home/pi/roms
 
@@ -83,32 +80,6 @@ unzip -o mame4all_pi.zip
 ln -s /home/pi/emulators/mame4all-pi/roms/ /home/pi/roms/mame4all
 cd /home/pi/pimame_installer
 rm -rf mame4all-pi/
-
-###dgen
-wget http://sheasilverman.com/rpi/raspbian/installer/dgen.zip
-mv dgen.zip /home/pi/emulators/dgen.zip
-cd /home/pi/emulators/
-unzip -o dgen.zip
-mkdir /home/pi/roms/genesis
-rm dgen.zip
-cd /home/pi/pimame_installer
-
-###cavestory
-wget http://sheasilverman.com/rpi/raspbian/installer/cavestory.zip
-mv cavestory.zip /home/pi/emulators/cavestory.zip
-cd /home/pi/emulators/
-unzip -o cavestory.zip
-rm cavestory.zip
-cd /home/pi/pimame_installer
-
-###dispmanx
-wget http://sheasilverman.com/rpi/raspbian/installer/SDL12-kms-dispmanx.zip
-unzip SDL12-kms-dispmanx.zip
-cd SDL12-kms-dispmanx
-sudo make install
-cd ..
-rm SDL12-kms-dispmanx.zip
-
 
 wget http://socialcase.com/raspberrypi/gridlee.zip
 mv gridlee.zip /home/pi/roms/
@@ -138,4 +109,3 @@ rm  -rf /home/pi/pimame_installer/PiMAME
 #echo 'python /home/pi/pimame_files/menu.py' >> /home/pi/.profile
 
 echo "Please restart to activate PiMAME :)"
-
