@@ -18,7 +18,9 @@ sudo rm -r /var/www
 sudo dpkg -r advancemame
 sudo dpkg -r advancemenu
 sudo dpkg -r gngeo
+sudo dpkg -r advancemess
 
+sudo apt-get install --reinstall libsdl1.2debian
 
 rm -rf /home/pi/emulators
 
