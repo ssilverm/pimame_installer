@@ -93,6 +93,7 @@ unzip -o dgen.zip
 mkdir /home/pi/roms/genesis
 rm dgen.zip
 cd /home/pi/pimame_installer
+chmod +x /home/pi/emulators/dgen/dgen
 
 ###cavestory
 wget http://sheasilverman.com/rpi/raspbian/installer/cavestory.zip
@@ -101,6 +102,7 @@ cd /home/pi/emulators/
 unzip -o cavestory.zip
 rm cavestory.zip
 cd /home/pi/pimame_installer
+chmod +x /home/pi/emulators/cavestory/nx
 
 ###dispmanx
 wget http://sheasilverman.com/rpi/raspbian/installer/SDL12-kms-dispmanx.zip
