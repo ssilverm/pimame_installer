@@ -105,6 +105,8 @@ cd /home/pi/emulators/
 unzip -o cavestory.zip
 rm cavestory.zip
 cd /home/pi/pimame_installer
+cp /home/pi/pimame_installer/config_files/cs.sh /home/pi/emulators/cs.sh
+chmod +x /home/pi/emulators/cs.sh
 chmod +x /home/pi/emulators/cavestory_rpi-master/nx
 
 ###dispmanx
