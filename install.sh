@@ -65,7 +65,9 @@ mkdir /home/pi/roms
 mkdir /home/pi/roms/nes
 
 ###pisnes
-wget https://pisnes.googlecode.com/files/pisnes.zip
+#wget https://pisnes.googlecode.com/files/pisnes.zip
+wget http://sheasilverman.com/rpi/raspbian/installer/pisnes2013-05-25.zip
+mv pisnes2013-05-25.zip pisnes.zip
 mkdir /home/pi/emulators/pisnes
 mv pisnes.zip /home/pi/emulators/pisnes
 cd /home/pi/emulators/pisnes/
