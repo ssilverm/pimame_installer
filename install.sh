@@ -103,7 +103,7 @@ cd /home/pi/emulators/
 unzip -o cavestory.zip
 rm cavestory.zip
 cd /home/pi/pimame_installer
-chmod +x /home/pi/emulators/cavestory/nx
+chmod +x /home/pi/emulators/cavestory_rpi-master/nx
 
 ###dispmanx
 wget http://sheasilverman.com/rpi/raspbian/installer/SDL12-kms-dispmanx.zip
