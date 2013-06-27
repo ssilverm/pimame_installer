@@ -95,7 +95,8 @@ unzip -o dgen.zip
 mkdir /home/pi/roms/genesis
 rm dgen.zip
 cd /home/pi/pimame_installer
-chmod +x /home/pi/emulators/dgen/dgen
+chmod +x /home/pi/emulators/dgen-sdl-1.32/dgen
+
 
 ###cavestory
 #wget http://sheasilverman.com/rpi/raspbian/installer/cavestory.zip
