@@ -150,7 +150,7 @@ mv pikeyd/pikeyd.conf ~/.pikeyd.conf
 if grep --quiet /home/pi/pimame_files/pikeyd /home/pi/.profile; then
   echo "pikeyd already exists, ignoring."
 else
-  echo 'python /home/pi/pimame_files/pikeyd -d' >> /home/pi/.profile
+  echo '/home/pi/pimame_files/pikeyd/pikeyd -d' >> /home/pi/.profile
 fi
 
 
