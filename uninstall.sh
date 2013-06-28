@@ -44,6 +44,28 @@ else
   echo "menu does not exist, ignoring."
 fi
 
+
+##############pikeyd############
+if grep --quiet /home/pi/pimame_files/pikeyd /home/pi/.profile; then
+  sed -i '/pikeyd/d' /home/pi/.profile
+else
+  echo "pikeyd does not exist, ignoring"
+fi
+
+if sudo grep --quiet uinput /etc/modules; then
+  sudo sed -i '/uinput/d' /etc/modules
+  sudo sed -i '/i2c-dev/d' /etc/modules
+else
+	echo "removing modules"
+fi
+
+if sudo grep --quiet '^#blacklist i2c-bcm2708$' /etc/modprobe.d/raspi-blacklist.conf ; then
+    sudo sed -i '/blacklist i2c-bcm2708/d' /etc/modprobe.d/raspi-blacklist.conf
+    sudo sh -c "echo 'blacklist i2c-bcm2708' >> /etc/modprobe.d/raspi-blacklist.conf"
+else
+	echo "Module not blacklisted"
+fi
+
 rm  -rf /home/pi/pimame_installer/PiMAME
 
 

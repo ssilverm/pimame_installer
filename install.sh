@@ -140,6 +140,36 @@ else
 echo 'python /home/pi/pimame_files/menu.py' >> /home/pi/.profile
 fi
 
+
+##############pikeyd############
+wget http://sheasilverman.com/rpi/raspbian/installer/pikeyd.zip
+mv pikeyd.zip /home/pi/pimame_files
+cd /home/pi/pimame_files
+unzip -o pikeyd.zip
+mv pikeyd/pikeyd.conf ~/.pikeyd.conf
+if grep --quiet /home/pi/pimame_files/pikeyd /home/pi/.profile; then
+  echo "pikeyd already exists, ignoring."
+else
+  echo 'python /home/pi/pimame_files/pikeyd -d' >> /home/pi/.profile
+fi
+
+
+if sudo grep --quiet uinput /etc/modules; then
+  echo "Modules have already been added"
+else
+	sudo sh -c "echo 'uinput' >> /etc/modules"
+	sudo sh -c "echo 'i2c-dev' >> /etc/modules"
+fi
+
+if sudo grep --quiet '^blacklist i2c-bcm2708$' /etc/modprobe.d/raspi-blacklist.conf ; then
+    echo "Blacklisting i2c-bcm2708"
+    sudo sed -i '/blacklist i2c-bcm2708/d' /etc/modprobe.d/raspi-blacklist.conf
+    sudo sh -c "echo '#blacklist i2c-bcm2708' >> /etc/modprobe.d/raspi-blacklist.conf"
+else
+	echo "Module already blacklisted"
+fi
+###########
+
 #sudo chown -R pi:pi /home/pi/roms
 rm  -rf /home/pi/pimame_installer/PiMAME
 #sudo echo 'www-data ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
