@@ -38,11 +38,11 @@ sudo /etc/init.d/lighttpd force-reload
 wget http://sheasilverman.com/rpi/raspbian/debs/advancemame-raspberrypi_1-1_armhf.deb
 wget http://sheasilverman.com/rpi/raspbian/debs/advancemenu_2.6-1_armhf.deb
 wget http://sheasilverman.com/rpi/raspbian/gngeo_0.8-1_armhf.deb
-wget http://sheasilverman.com/rpi/raspbian/debs/advancemess_0.102.0.1-1_armhf.deb
+#wget http://sheasilverman.com/rpi/raspbian/debs/advancemess_0.102.0.1-1_armhf.deb
 sudo dpkg --force-overwrite -i advancemenu_2.6-1_armhf.deb 
 sudo dpkg --force-overwrite -i advancemame-raspberrypi_1-1_armhf.deb
 sudo dpkg --force-overwrite -i gngeo_0.8-1_armhf.deb
-sudo dpkg --force-overwrite -i advancemess_0.102.0.1-1_armhf.deb
+#sudo dpkg --force-overwrite -i advancemess_0.102.0.1-1_armhf.deb
 
 wget http://sheasilverman.com/rpi/raspbian/pcsx_rearmed_22042013.tgz
 tar zxfv pcsx_rearmed_22042013.tgz
