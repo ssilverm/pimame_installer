@@ -1,1 +1,0 @@
-./configure  --prefix=/usr --exec-prefix=/usr --disable-video-fbcon --enable-video-kms --disable-video-directfb --disable-video-dispmanx --disable-cdrom --disable-oss --disable-alsatest --disable-pulseaudio --disable-pulseaudio-shared --disable-arts --disable-nas --disable-esd --disable-nas-shared --disable-diskaudio --disable-dummyaudio --disable-mintaudio --disable-video-x11
