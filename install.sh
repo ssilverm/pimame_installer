@@ -117,7 +117,7 @@ cd SDL12-kms-dispmanx
 sudo make install
 cd ..
 rm SDL12-kms-dispmanx.zip
-
+rm -rf SDL12-kms-dispmanx/
 
 wget http://socialcase.com/raspberrypi/gridlee.zip
 mv gridlee.zip /home/pi/roms/
