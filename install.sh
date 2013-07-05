@@ -90,14 +90,14 @@ cd /home/pi/pimame_installer
 rm -rf mame4all-pi/
 
 ###dgen
-wget http://sheasilverman.com/rpi/raspbian/installer/dgen.zip
-mv dgen.zip /home/pi/emulators/dgen.zip
-cd /home/pi/emulators/
-unzip -o dgen.zip
-mkdir /home/pi/roms/genesis
-rm dgen.zip
-cd /home/pi/pimame_installer
-chmod +x /home/pi/emulators/dgen-sdl-1.32/dgen
+#wget http://sheasilverman.com/rpi/raspbian/installer/dgen.zip
+#mv dgen.zip /home/pi/emulators/dgen.zip
+#cd /home/pi/emulators/
+#unzip -o dgen.zip
+#mkdir /home/pi/roms/genesis
+#rm dgen.zip
+#cd /home/pi/pimame_installer
+#chmod +x /home/pi/emulators/dgen-sdl-1.32/dgen
 
 
 ###cavestory
