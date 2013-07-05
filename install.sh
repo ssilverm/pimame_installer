@@ -43,7 +43,7 @@ sudo dpkg --force-overwrite -i advancemenu_2.6-1_armhf.deb
 sudo dpkg --force-overwrite -i advancemame-raspberrypi_1-1_armhf.deb
 sudo dpkg --force-overwrite -i gngeo_0.8-1_armhf.deb
 #sudo dpkg --force-overwrite -i advancemess_0.102.0.1-1_armhf.deb
-
+sudo apt-get install stella
 wget http://sheasilverman.com/rpi/raspbian/pcsx_rearmed_22042013.tgz
 tar zxfv pcsx_rearmed_22042013.tgz
 mkdir /home/pi/emulators
@@ -66,8 +66,8 @@ mkdir /home/pi/roms/nes
 
 ###pisnes
 #wget https://pisnes.googlecode.com/files/pisnes.zip
-wget http://sheasilverman.com/rpi/raspbian/installer/pisnes2013-05-25.zip
-mv pisnes2013-05-25.zip pisnes.zip
+#wget http://sheasilverman.com/rpi/raspbian/installer/pisnes2013-05-25.zip
+wget http://sheasilverman.com/rpi/raspbian/installer/pisnes.zip
 mkdir /home/pi/emulators/pisnes
 mv pisnes.zip /home/pi/emulators/pisnes
 cd /home/pi/emulators/pisnes/
@@ -142,32 +142,32 @@ fi
 
 
 ##############pikeyd############
-wget http://sheasilverman.com/rpi/raspbian/installer/pikeyd.zip
-mv pikeyd.zip /home/pi/pimame_files
-cd /home/pi/pimame_files
-unzip -o pikeyd.zip
-mv pikeyd/pikeyd.conf ~/.pikeyd.conf
-if grep --quiet /home/pi/pimame_files/pikeyd /home/pi/.profile; then
-  echo "pikeyd already exists, ignoring."
-else
-  echo '/home/pi/pimame_files/pikeyd/pikeyd -d' >> /home/pi/.profile
-fi
+#wget http://sheasilverman.com/rpi/raspbian/installer/pikeyd.zip
+#mv pikeyd.zip /home/pi/pimame_files
+#cd /home/pi/pimame_files
+#unzip -o pikeyd.zip
+#mv pikeyd/pikeyd.conf ~/.pikeyd.conf
+#if grep --quiet /home/pi/pimame_files/pikeyd /home/pi/.profile; then
+#  echo "pikeyd already exists, ignoring."
+#else
+#  echo '/home/pi/pimame_files/pikeyd/pikeyd -d' >> /home/pi/.profile
+#fi
 
 
-if sudo grep --quiet uinput /etc/modules; then
-  echo "Modules have already been added"
-else
-	sudo sh -c "echo 'uinput' >> /etc/modules"
-	sudo sh -c "echo 'i2c-dev' >> /etc/modules"
-fi
+#if sudo grep --quiet uinput /etc/modules; then
+#  echo "Modules have already been added"
+#else
+#	sudo sh -c "echo 'uinput' >> /etc/modules"
+#	sudo sh -c "echo 'i2c-dev' >> /etc/modules"
+#fi
 
-if sudo grep --quiet '^blacklist i2c-bcm2708$' /etc/modprobe.d/raspi-blacklist.conf ; then
-    echo "Blacklisting i2c-bcm2708"
-    sudo sed -i '/blacklist i2c-bcm2708/d' /etc/modprobe.d/raspi-blacklist.conf
-    sudo sh -c "echo '#blacklist i2c-bcm2708' >> /etc/modprobe.d/raspi-blacklist.conf"
-else
-	echo "Module already blacklisted"
-fi
+#if sudo grep --quiet '^blacklist i2c-bcm2708$' /etc/modprobe.d/raspi-blacklist.conf ; then
+#    echo "Blacklisting i2c-bcm2708"
+#    sudo sed -i '/blacklist i2c-bcm2708/d' /etc/modprobe.d/raspi-blacklist.conf
+#    sudo sh -c "echo '#blacklist i2c-bcm2708' >> /etc/modprobe.d/raspi-blacklist.conf"
+#else
+#	echo "Module already blacklisted"
+#fi
 ###########
 
 #sudo chown -R pi:pi /home/pi/roms
