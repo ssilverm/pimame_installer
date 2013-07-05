@@ -70,7 +70,7 @@ mkdir /home/pi/roms/nes
 wget http://sheasilverman.com/rpi/raspbian/installer/pisnes.zip
 #mkdir /home/pi/emulators/pisnes
 mv pisnes.zip /home/pi/emulators
-#cd /home/pi/emulators/pisnes/
+cd /home/pi/emulators/
 unzip -o pisnes.zip
 chmod +x /home/pi/emulators/pisnes/snes9x
 chmod +x /home/pi/emulators/pisnes/snes9x.gui
