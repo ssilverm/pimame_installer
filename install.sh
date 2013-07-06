@@ -43,7 +43,7 @@ sudo dpkg --force-overwrite -i advancemenu_2.6-1_armhf.deb
 sudo dpkg --force-overwrite -i advancemame-raspberrypi_1-1_armhf.deb
 sudo dpkg --force-overwrite -i gngeo_0.8-1_armhf.deb
 #sudo dpkg --force-overwrite -i advancemess_0.102.0.1-1_armhf.deb
-
+sudo apt-get install stella
 wget http://sheasilverman.com/rpi/raspbian/pcsx_rearmed_22042013.tgz
 tar zxfv pcsx_rearmed_22042013.tgz
 mkdir /home/pi/emulators
@@ -66,12 +66,14 @@ mkdir /home/pi/roms
 
 ###pisnes
 #wget https://pisnes.googlecode.com/files/pisnes.zip
-wget http://sheasilverman.com/rpi/raspbian/installer/pisnes2013-05-25.zip
-mv pisnes2013-05-25.zip pisnes.zip
+#wget http://sheasilverman.com/rpi/raspbian/installer/pisnes2013-05-25.zip
+wget http://sheasilverman.com/rpi/raspbian/installer/pisnes.zip
 mkdir /home/pi/emulators/pisnes
 mv pisnes.zip /home/pi/emulators/pisnes
-cd /home/pi/emulators/pisnes/
+cd /home/pi/emulators/pisnes
 unzip -o pisnes.zip
+chmod +x /home/pi/emulators/pisnes/snes9x
+chmod +x /home/pi/emulators/pisnes/snes9x.gui
 ln -s /home/pi/emulators/pisnes/roms/ /home/pi/roms/snes
 cd /home/pi/pimame_installer
 
@@ -88,14 +90,14 @@ cd /home/pi/pimame_installer
 rm -rf mame4all-pi/
 
 ###dgen
-wget http://sheasilverman.com/rpi/raspbian/installer/dgen.zip
-mv dgen.zip /home/pi/emulators/dgen.zip
-cd /home/pi/emulators/
-unzip -o dgen.zip
-mkdir /home/pi/roms/genesis
-rm dgen.zip
-cd /home/pi/pimame_installer
-chmod +x /home/pi/emulators/dgen-sdl-1.32/dgen
+#wget http://sheasilverman.com/rpi/raspbian/installer/dgen.zip
+#mv dgen.zip /home/pi/emulators/dgen.zip
+#cd /home/pi/emulators/
+#unzip -o dgen.zip
+#mkdir /home/pi/roms/genesis
+#rm dgen.zip
+#cd /home/pi/pimame_installer
+#chmod +x /home/pi/emulators/dgen-sdl-1.32/dgen
 
 
 ###cavestory
