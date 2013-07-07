@@ -65,7 +65,7 @@ chmod +x /home/pi/emulators/cavestory_rpi-master/nx
 #git checkout beta
 #cd ..
 cp PiMAME/pimame_files/menu.py /home/pi/pimame_files/menu.py
-
+cp PiMAME/.advance/advmenu-snes.rc /home/pi/.advance/advmenu-snes.rc
 
 #http://pimame.org/forum/discussion/48/mame-settings-not-saving-in-new-installer-script-version-#Item_5 - User Cramps
 sudo chown pi /home/pi/.advance
