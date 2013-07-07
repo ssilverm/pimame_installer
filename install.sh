@@ -112,6 +112,19 @@ cp /home/pi/pimame_installer/config_files/cs.sh /home/pi/emulators/cs.sh
 chmod +x /home/pi/emulators/cs.sh
 chmod +x /home/pi/emulators/cavestory_rpi-master/nx
 
+###scummvm
+sudo apt-get -y install scummvm
+
+###gameboy - thanks beta_tester
+wget http://sheasilverman.com/rpi/raspbian/installer/gearboy.zip
+#mkdir /home/pi/emulators/gearboy
+mv gearboy.zip /home/pi/emulators/
+cd /home/pi/emulators/
+unzip -o gearboy.zip
+rm gearboy.zip
+cd /home/pi/pimame_installer
+mkdir /home/pi/roms/gameboy
+
 ###dispmanx
 #wget http://sheasilverman.com/rpi/raspbian/installer/SDL12-kms-dispmanx.zip
 #unzip -o SDL12-kms-dispmanx.zip
