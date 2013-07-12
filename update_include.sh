@@ -70,7 +70,7 @@ mkdir /home/pi/roms/gameboy
 
 
 ####gameboy advance
-http://sheasilverman.com/rpi/raspbian/installer/gpsp.zip
+wget http://sheasilverman.com/rpi/raspbian/installer/gpsp.zip
 mkdir /home/pi/emulators/gpsp
 mv gearboy.zip /home/pi/emulators/gpsp
 cd /home/pi/emulators/gpsp
