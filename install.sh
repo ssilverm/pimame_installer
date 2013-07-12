@@ -21,9 +21,9 @@ git clone https://github.com/ssilverm/PiMAME.git
 
 
 ##remove this
-cd PiMAME/
-git checkout beta
-cd ..
+#cd PiMAME/
+#git checkout beta
+#cd ..
 
 cp -r PiMAME/pimame_files /home/pi/
 cp -r PiMAME/.advance/ /home/pi/
@@ -62,7 +62,7 @@ rm gngeo_0.8-1_armhf.deb
 rm advancemess_0.102.0.1-1_armhf.deb
 
 mkdir /home/pi/roms
-mkdir /home/pi/roms/nes
+#mkdir /home/pi/roms/nes
 
 ###pisnes
 #wget https://pisnes.googlecode.com/files/pisnes.zip
@@ -179,7 +179,6 @@ fi
 #  echo '/home/pi/pimame_files/pikeyd/pikeyd -d' >> /home/pi/.profile
 #fi
 
-
 #if sudo grep --quiet uinput /etc/modules; then
 #  echo "Modules have already been added"
 #else
@@ -203,4 +202,3 @@ rm  -rf /home/pi/pimame_installer/PiMAME
 #echo 'python /home/pi/pimame_files/menu.py' >> /home/pi/.profile
 
 echo "Please restart to activate PiMAME :)"
-
