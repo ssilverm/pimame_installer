@@ -125,6 +125,17 @@ rm gearboy.zip
 cd /home/pi/pimame_installer
 mkdir /home/pi/roms/gameboy
 
+####gameboy advance
+http://sheasilverman.com/rpi/raspbian/installer/gpsp.zip
+mkdir /home/pi/emulators/gpsp
+mv gearboy.zip /home/pi/emulators/gpsp
+cd /home/pi/emulators/gpsp
+unzip -o gpsp.zip
+rm gpsp.zip
+cd /home/pi/pimame_installer
+mkdir /home/pi/roms/gameboyadvance
+
+
 ###dispmanx
 #wget http://sheasilverman.com/rpi/raspbian/installer/SDL12-kms-dispmanx.zip
 #unzip -o SDL12-kms-dispmanx.zip
