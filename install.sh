@@ -143,6 +143,16 @@ wget http://sheasilverman.com/rpi/raspbian/installer/vice_2.3.21-1_armhf.deb
 sudo dpkg -i vice_2.3.21-1_armhf.deb
 rm -rf vice_2.3.21-1_armhf.deb
 
+####fba
+wget http://sheasilverman.com/rpi/raspbian/installer/piFBA.zip
+mkdir /home/pi/emulators/fba
+mv piFBA.zip /home/pi/emulators/fba
+cd /home/pi/emulators/fba
+unzip -o piFBA.zip
+rm piFBA.zip
+cd /home/pi/pimame_installer
+mkdir /home/pi/roms/fba
+
 
 ###dispmanx
 #wget http://sheasilverman.com/rpi/raspbian/installer/SDL12-kms-dispmanx.zip
