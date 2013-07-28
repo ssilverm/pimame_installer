@@ -138,6 +138,11 @@ mkdir /home/pi/roms/gameboyadvance
 ###xboxdriver
 sudo apt-get -y install xboxdrv
 
+####c64
+wget http://sheasilverman.com/rpi/raspbian/installer/vice_2.3.21-1_armhf.deb
+sudo dpkg -i vice_2.3.21-1_armhf.deb
+rm -rf vice_2.3.21-1_armhf.deb
+
 
 ###dispmanx
 #wget http://sheasilverman.com/rpi/raspbian/installer/SDL12-kms-dispmanx.zip
