@@ -168,6 +168,12 @@ else
 	echo '/home/pi/pimame_files/getip.sh' >> /home/pi/.profile
 fi
 ##############
+if grep --quiet xboxdrv /home/pi/.profile; then
+  echo "xboxdrv already exists, ignoring."
+else
+	echo 'sudo xboxdrv --silent --config /home/pi/pimame_files/xboxdrv/mapping.cfg --dbus session &' >> /home/pi/.profile
+fi
+##############
 if grep --quiet /home/pi/pimame_files/menu.py /home/pi/.profile; then
   echo "menu already exists, ignoring."
 else
