@@ -135,6 +135,9 @@ rm gpsp.zip
 cd /home/pi/pimame_installer
 mkdir /home/pi/roms/gameboyadvance
 
+###xboxdriver
+sudo apt-get -y install xboxdrv
+
 
 ###dispmanx
 #wget http://sheasilverman.com/rpi/raspbian/installer/SDL12-kms-dispmanx.zip
