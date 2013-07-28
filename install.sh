@@ -151,7 +151,7 @@ cd /home/pi/emulators/fba
 unzip -o piFBA.zip
 rm piFBA.zip
 cd /home/pi/pimame_installer
-mkdir /home/pi/roms/fba
+ln -s /home/pi/emulators/fba/roms/ /home/pi/roms/fba
 
 
 ###dispmanx
