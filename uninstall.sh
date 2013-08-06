@@ -25,7 +25,6 @@ sudo apt-get install --reinstall libsdl1.2debian
 rm -rf /home/pi/emulators
 
 
-
 if sudo grep --quiet www-data /etc/sudoers; then
     sudo sed -i '/www-data/d' /etc/sudoers
 else
@@ -68,5 +67,14 @@ fi
 
 rm  -rf /home/pi/pimame_installer/PiMAME
 
+##############
 
+if grep --quiet xboxdrv /home/pi/.profile; then
+  sed -i 'sudo xboxdrv --silent --config /home/pi/pimame_files/xboxdrv_mapping.cfg --dbus session &' /home/pi/.profile
+else
+  echo "xboxdrv does not exist, ignoring."
+fi
+
+
+##############
 
