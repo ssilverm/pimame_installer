@@ -79,6 +79,32 @@ rm gpsp.zip
 cd /home/pi/pimame_installer
 mkdir /home/pi/roms/gameboyadvance
 
+###xboxdriver
+sudo apt-get -y install xboxdrv
+
+####c64
+wget http://sheasilverman.com/rpi/raspbian/installer/vice_2.3.21-1_armhf.deb
+sudo dpkg -i vice_2.3.21-1_armhf.deb
+rm -rf vice_2.3.21-1_armhf.deb
+
+####fba
+wget http://sheasilverman.com/rpi/raspbian/installer/piFBA.zip
+mkdir /home/pi/emulators/fba
+mv piFBA.zip /home/pi/emulators/fba
+cd /home/pi/emulators/fba
+unzip -o piFBA.zip
+rm piFBA.zip
+cd /home/pi/pimame_installer
+ln -s /home/pi/emulators/fba/roms/ /home/pi/roms/fba
+
+##############
+if grep --quiet xboxdrv /home/pi/.profile; then
+  echo "xboxdrv already exists, ignoring."
+else
+    echo 'sudo xboxdrv --silent --config /home/pi/pimame_files/xboxdrv_mapping.cfg --dbus session &' >> /home/pi/.profile
+fi
+##############
+
 ###dispmanx
 #wget http://sheasilverman.com/rpi/raspbian/installer/SDL12-kms-dispmanx.zip
 #unzip -o SDL12-kms-dispmanx.zip
@@ -131,6 +157,6 @@ sudo chmod 770 /home/pi/.advance
 
 #increment
 
-echo "PiMAME is now version 0.7.6"
+echo "PiMAME is now version 0.7.7"
 
 
