@@ -21,9 +21,9 @@ git clone https://github.com/ssilverm/PiMAME.git
 
 
 ##remove this
-#cd PiMAME/
-#git checkout beta
-#cd ..
+cd PiMAME/
+git checkout beta
+cd ..
 
 cp -r PiMAME/pimame_files /home/pi/
 cp -r PiMAME/.advance/ /home/pi/
@@ -38,11 +38,11 @@ sudo /etc/init.d/lighttpd force-reload
 wget http://sheasilverman.com/rpi/raspbian/debs/advancemame-raspberrypi_1-1_armhf.deb
 wget http://sheasilverman.com/rpi/raspbian/debs/advancemenu_2.6-1_armhf.deb
 wget http://sheasilverman.com/rpi/raspbian/gngeo_0.8-1_armhf.deb
-#wget http://sheasilverman.com/rpi/raspbian/debs/advancemess_0.102.0.1-1_armhf.deb
+wget http://sheasilverman.com/rpi/raspbian/debs/advancemess_0.102.0.1-1_armhf.deb
 sudo dpkg --force-overwrite -i advancemenu_2.6-1_armhf.deb 
 sudo dpkg --force-overwrite -i advancemame-raspberrypi_1-1_armhf.deb
 sudo dpkg --force-overwrite -i gngeo_0.8-1_armhf.deb
-#sudo dpkg --force-overwrite -i advancemess_0.102.0.1-1_armhf.deb
+sudo dpkg --force-overwrite -i advancemess_0.102.0.1-1_armhf.deb
 sudo apt-get install stella
 wget http://sheasilverman.com/rpi/raspbian/pcsx_rearmed_22042013.tgz
 tar zxfv pcsx_rearmed_22042013.tgz
@@ -62,6 +62,8 @@ rm gngeo_0.8-1_armhf.deb
 rm advancemess_0.102.0.1-1_armhf.deb
 
 mkdir /home/pi/roms
+mkdir /home/pi/.advance/image/nes
+ln -s /home/pi/.advance/image/nes/ /home/pi/roms/nes
 #mkdir /home/pi/roms/nes
 
 ###pisnes
