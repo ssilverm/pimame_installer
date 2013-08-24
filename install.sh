@@ -62,6 +62,7 @@ rm gngeo_0.8-1_armhf.deb
 rm advancemess_0.102.0.1-1_armhf.deb
 
 mkdir /home/pi/roms
+mkdir /home/pi/.advance/image
 mkdir /home/pi/.advance/image/nes
 ln -s /home/pi/.advance/image/nes/ /home/pi/roms/nes
 #mkdir /home/pi/roms/nes
