@@ -162,6 +162,6 @@ sudo chmod 770 /home/pi/.advance
 
 #increment
 
-echo "PiMAME is now version 0.7.7"
+echo "PiMAME is now version 0.7.8"
 
 
