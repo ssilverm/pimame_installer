@@ -120,6 +120,11 @@ fi
 cp PiMAME/pimame_files/menu.py /home/pi/pimame_files/menu.py
 cp PiMAME/.advance/advmenu-snes.rc /home/pi/.advance/advmenu-snes.rc
 cp PiMAME/.advance/advmenu-gameboy.rc /home/pi/.advance/advmenu-gameboy.rc
+cp PiMAME/.advance/advmenu-nes.rc /home/pi/.advance/advmenu-nes.rc
+
+mkdir /home/pi/.advance/image
+mkdir /home/pi/.advance/image/nes
+ln -s /home/pi/.advance/image/nes/ /home/pi/roms/nes
 
 #http://pimame.org/forum/discussion/48/mame-settings-not-saving-in-new-installer-script-version-#Item_5 - User Cramps
 sudo chown pi /home/pi/.advance
@@ -157,6 +162,6 @@ sudo chmod 770 /home/pi/.advance
 
 #increment
 
-echo "PiMAME is now version 0.7.7"
+echo "PiMAME is now version 0.7.8"
 
 
