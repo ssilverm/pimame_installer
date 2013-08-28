@@ -97,6 +97,10 @@ rm piFBA.zip
 cd /home/pi/pimame_installer
 ln -s /home/pi/emulators/fba/roms/ /home/pi/roms/fba
 
+####mess nes
+wget http://sheasilverman.com/rpi/raspbian/debs/advancemess_0.102.0.1-1_armhf.deb
+sudo dpkg --force-overwrite -i advancemess_0.102.0.1-1_armhf.deb
+
 ##############
 if grep --quiet xboxdrv /home/pi/.profile; then
   echo "xboxdrv already exists, ignoring."
