@@ -9,6 +9,11 @@ then
 fi
 
 ###pisnes
+if [ -f /home/pi/emulators/pisnes/snes9x.cfg ];
+then
+    cp /home/pi/emulators/pisnes/snes9x.cfg /home/pi/emulators/pisnes/snes9x.cfg.bak
+fi
+
 wget http://sheasilverman.com/rpi/raspbian/installer/pisnes.zip
 mkdir /home/pi/emulators/pisnes
 mv pisnes.zip /home/pi/emulators/pisnes
@@ -17,6 +22,16 @@ unzip -o pisnes.zip
 chmod +x /home/pi/emulators/pisnes/snes9x
 chmod +x /home/pi/emulators/pisnes/snes9x.gui
 ln -s /home/pi/emulators/pisnes/roms/ /home/pi/roms/snes
+
+if diff /home/pi/emulators/pisnes/snes9x.cfg /home/pi/emulators/pisnes/snes9x.cfg.bak >/dev/null ; then
+  echo "snes9x config is the same"
+  rm /home/pi/emulators/pisnes/snes9x.cfg.bak
+else
+  echo "snes9x config is different.  restoring custom config."
+  cp /home/pi/emulators/pisnes/snes9x.cfg /home/pi/emulators/pisnes/snes9x.cfg.base
+  mv /home/pi/emulators/pisnes/snes9x.cfg.bak /home/pi/emulators/pisnes/snes9x.cfg
+fi
+
 cd /home/pi/pimame_installer
 
 
@@ -166,6 +181,6 @@ sudo chmod 770 /home/pi/.advance
 
 #increment
 
-echo "PiMAME is now version 0.7.8"
+echo "PiMAME is now version 0.7.8.1"
 
 
