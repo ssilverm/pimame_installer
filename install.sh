@@ -157,6 +157,15 @@ cd /home/pi/pimame_installer
 ln -s /home/pi/emulators/fba/roms/ /home/pi/roms/fba
 
 
+####fba
+http://sheasilverman.com/rpi/raspbian/mupen64plus-rpi.zip
+mkdir /home/pi/emulators/mupen
+mv mupen64plus-rpi.zip /home/pi/emulators/mupen
+cd /home/pi/emulators/mupen
+unzip -o mupen64plus-rpi.zip
+rm mupen64plus-rpi.zip
+cd /home/pi/pimame_installer
+
 ###dispmanx
 #wget http://sheasilverman.com/rpi/raspbian/installer/SDL12-kms-dispmanx.zip
 #unzip -o SDL12-kms-dispmanx.zip
