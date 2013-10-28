@@ -158,7 +158,7 @@ ln -s /home/pi/emulators/fba/roms/ /home/pi/roms/fba
 
 
 ####mupen
-http://sheasilverman.com/rpi/raspbian/mupen64plus-rpi.zip
+wget http://sheasilverman.com/rpi/raspbian/mupen64plus-rpi.zip
 mkdir /home/pi/emulators/mupen
 mv mupen64plus-rpi.zip /home/pi/emulators/mupen
 cd /home/pi/emulators/mupen
