@@ -21,9 +21,9 @@ git clone https://github.com/ssilverm/PiMAME.git
 
 
 ##remove this
-##cd PiMAME/
-##git checkout beta
-##cd ..
+cd PiMAME/
+git checkout mupen
+cd ..
 
 cp -r PiMAME/pimame_files /home/pi/
 cp -r PiMAME/.advance/ /home/pi/
@@ -165,6 +165,7 @@ cd /home/pi/emulators/mupen
 unzip -o mupen64plus-rpi.zip
 rm mupen64plus-rpi.zip
 cd /home/pi/pimame_installer
+mkdir /home/pi/roms/n64
 
 ###dispmanx
 #wget http://sheasilverman.com/rpi/raspbian/installer/SDL12-kms-dispmanx.zip
