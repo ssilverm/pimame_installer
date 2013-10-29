@@ -21,9 +21,9 @@ git clone https://github.com/ssilverm/PiMAME.git
 
 
 ##remove this
-cd PiMAME/
-git checkout mupen
-cd ..
+#cd PiMAME/
+#git checkout mupen
+#cd ..
 
 cp -r PiMAME/pimame_files /home/pi/
 cp -r PiMAME/.advance/ /home/pi/
