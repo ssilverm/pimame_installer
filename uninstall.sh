@@ -70,7 +70,7 @@ rm  -rf /home/pi/pimame_installer/PiMAME
 ##############
 
 if grep --quiet xboxdrv /home/pi/.profile; then
-  sed -i '/sudo xboxdrv --silent --config /home/pi/pimame_files/xboxdrv_mapping.cfg --dbus session &' /home/pi/.profile
+  sed -i '/sudo xboxdrv --silent --config /home/pi/pimame_files/xboxdrv_mapping.cfg --dbus session &/d' /home/pi/.profile
 else
   echo "xboxdrv does not exist, ignoring."
 fi
