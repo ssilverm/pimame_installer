@@ -115,12 +115,13 @@ ln -s /home/pi/emulators/fba/roms/ /home/pi/roms/fba
 
 ####mupen
 wget http://sheasilverman.com/rpi/raspbian/mupen64plus-rpi.zip
-mkdir /home/pi/emulators/mupen
-mv mupen64plus-rpi.zip /home/pi/emulators/mupen
-cd /home/pi/emulators/mupen
+#mkdir /home/pi/emulators/mupen
+mv mupen64plus-rpi.zip /home/pi/emulators/
+cd /home/pi/emulators/
 unzip -o mupen64plus-rpi.zip
 rm mupen64plus-rpi.zip
 cd /home/pi/pimame_installer
+mkdir /home/pi/roms/n64
 
 ####mess nes
 wget http://sheasilverman.com/rpi/raspbian/debs/advancemess_0.102.0.1-1_armhf.deb
