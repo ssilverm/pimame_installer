@@ -164,7 +164,7 @@ mv mupen64plus-rpi.zip /home/pi/emulators/
 cd /home/pi/emulators/
 unzip -o mupen64plus-rpi.zip
 rm mupen64plus-rpi.zip
-cd mupen65plus-rpi/test/
+cd mupen64plus-rpi/test/
 chmod +x mupen64plus
 cd /home/pi/pimame_installer
 mkdir /home/pi/roms/n64
