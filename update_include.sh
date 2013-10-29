@@ -112,6 +112,19 @@ rm piFBA.zip
 cd /home/pi/pimame_installer
 ln -s /home/pi/emulators/fba/roms/ /home/pi/roms/fba
 
+
+####mupen
+wget http://sheasilverman.com/rpi/raspbian/mupen64plus-rpi.zip
+#mkdir /home/pi/emulators/mupen
+mv mupen64plus-rpi.zip /home/pi/emulators/
+cd /home/pi/emulators/
+unzip -o mupen64plus-rpi.zip
+rm mupen64plus-rpi.zip
+cd mupen64plus-rpi/test/
+chmod +x mupen64plus
+cd /home/pi/pimame_installer
+mkdir /home/pi/roms/n64
+
 ####mess nes
 wget http://sheasilverman.com/rpi/raspbian/debs/advancemess_0.102.0.1-1_armhf.deb
 sudo dpkg --force-overwrite -i advancemess_0.102.0.1-1_armhf.deb
@@ -181,6 +194,6 @@ sudo chmod 770 /home/pi/.advance
 
 #increment
 
-echo "PiMAME is now version 0.7.9"
+echo "PiMAME is now version 0.7.10"
 
 
