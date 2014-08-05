@@ -6,14 +6,14 @@
 
 echo "Starting Install..."
 
-
+cd /home/pi
 sudo apt-get update
-sudo apt-get -y install vsftpd xboxdrv stella python-pip
+sudo apt-get -y install vsftpd xboxdrv stella python-pip python-dev
 git clone https://github.com/ssilverm/pimame-8 pimame
 cd pimame
 git submodule init
 git submodule update
-sudo pip install flask pyyaml
+sudo pip install flask pyyaml python-levenshtein
 cp -r config/.advance/ ~/
 sudo cp config/vsftpd.conf /etc/
 sudo cp config/inittab /etc/
@@ -98,7 +98,7 @@ wget http://sheasilverman.com/rpi/raspbian/installer/dgen.zip
 mv dgen.zip /home/pi/pimame/emulators/dgen.zip
 cd /home/pi/pimame/emulators/
 unzip -o dgen.zip
-mkdir /home/pi/roms/genesis
+mkdir /home/pi/pimame/roms/genesis
 rm dgen.zip
 cd /home/pi/pimame
 chmod +x /home/pi/pimame/emulators/dgen-sdl-1.32/dgen
