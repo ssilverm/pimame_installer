@@ -13,7 +13,7 @@ git clone https://github.com/ssilverm/pimame-8 pimame
 cd pimame
 git submodule init
 git submodule update
-sudo pip install flask pyyaml
+sudo pip install flask pyyaml python-levenshtein
 cp -r config/.advance/ ~/
 sudo cp config/vsftpd.conf /etc/
 sudo cp config/inittab /etc/
