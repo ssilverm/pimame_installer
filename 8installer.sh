@@ -143,7 +143,6 @@ sudo apt-get -y install xboxdrv
 
 ####c64
 wget http://sheasilverman.com/rpi/raspbian/installer/vice_2.3.21-1_armhf.deb
-sudo apt-get -y install libsdl1.2-dev # Dependency for vice deb
 sudo dpkg -i vice_2.3.21-1_armhf.deb
 rm -rf vice_2.3.21-1_armhf.deb
 
