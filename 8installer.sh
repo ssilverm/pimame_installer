@@ -8,7 +8,7 @@ echo "Starting Install..."
 
 cd /home/pi
 sudo apt-get update
-sudo apt-get -y install vsftpd xboxdrv stella python-pip
+sudo apt-get -y install vsftpd xboxdrv stella python-pip python-dev
 git clone https://github.com/ssilverm/pimame-8 pimame
 cd pimame
 git submodule init
