@@ -6,7 +6,7 @@
 
 echo "Starting Install..."
 
-
+cd /home/pi
 sudo apt-get update
 sudo apt-get -y install vsftpd xboxdrv stella python-pip
 git clone https://github.com/ssilverm/pimame-8 pimame
