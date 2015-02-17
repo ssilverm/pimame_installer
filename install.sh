@@ -4,6 +4,10 @@
 #   exit 1
 #fi
 
+echo "THIS IS THE OLD VERSION OF PIMAME AND IS NOT SUPPORTED!!!!!!"
+echo "REMOVE THE exit 1 from this line to continue"
+exit 1
+
 echo "Starting Install..."
 sudo apt-get update
 sudo addgroup --system www-data
