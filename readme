@@ -7,7 +7,7 @@ To install PiMAME on the Raspberry Pi, follow these instructions:
 sudo apt-get install git
 git clone https://github.com/ssilverm/pimame_installer
 cd pimame_installer
-sudo ./install.sh
+sudo ./installer.sh
 
 Following these instructions will result in the installation of PiMAME, a Web Frontend, FTP server, 
 and other useful software.
