@@ -4,6 +4,9 @@ if [ "$(id -u)" != "0" ]; then
    exit 1
 fi
 
+echo "This script is outdated.  Please goto https://github.com/ssilverm/piplay-installer for the latest."
+exit 1
+
 echo "Starting Removal of PiMAME :( ...."
 
 sudo apt-get -q -y remove vsftpd imagemagick lighttpd php5-cgi
