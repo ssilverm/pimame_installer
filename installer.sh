@@ -4,6 +4,13 @@
 #   exit 1
 #fi
 
+
+
+echo "This script is outdated.  Please goto https://github.com/ssilverm/piplay-installer for the latest."
+exit 1
+
+
+
 echo "Starting Install..."
 
 
